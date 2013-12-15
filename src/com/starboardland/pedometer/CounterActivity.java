@@ -39,7 +39,8 @@ public class CounterActivity extends Activity implements SensorEventListener {
     protected void onPause() {
         super.onPause();
         activityRunning = false;
-//        sensorManager.unregisterListener(this);
+        // if you unregister the last listener, the hardware will stop detecting step events
+//        sensorManager.unregisterListener(this); 
     }
 
     @Override
